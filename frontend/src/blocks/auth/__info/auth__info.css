@@ -1,0 +1,12 @@
+.auth__info {
+    margin: 0;
+    margin-top: 15px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+  }

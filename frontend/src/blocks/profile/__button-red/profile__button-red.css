@@ -1,0 +1,27 @@
+.profile__button-red {
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;    
+    background-image: url(../../../images/edit.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.profile__button-red:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+@media screen  and (max-width:882px) and (min-width: 320px) {
+
+    .profile__button-red {
+        width: 18px;
+        height: 18px;
+     }
+
+}

@@ -1,0 +1,7 @@
+@media screen  and (max-width:582px) and (min-width: 320px) {
+
+
+    .popup__form_type_photo {
+        max-width: 240px;
+    }
+}

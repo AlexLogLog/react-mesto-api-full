@@ -1,0 +1,22 @@
+.auth__link {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height, or 122% */
+    text-align: right;
+    color: #FFFFFF;
+    transition: opacity 0.25s;
+    text-decoration: none;
+    position: absolute;
+    margin: 0;
+    z-index: 2;
+    top: 50px;
+    right: 25%;
+  }
+  
+  .auth__link:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }

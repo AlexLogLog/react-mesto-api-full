@@ -1,0 +1,5 @@
+.popup__auth_type_ok {
+    width: 120px;
+    height: 120px;
+    background-image: url(../../../../images/ok.png);
+}

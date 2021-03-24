@@ -1,0 +1,10 @@
+@media screen  and (max-width:582px) and (min-width: 320px) {
+
+    .popup__edit_type_profile {
+        max-width: 238px;
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 25px;
+        padding-bottom: 45px;
+    }
+}

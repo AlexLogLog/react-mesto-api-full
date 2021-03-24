@@ -1,0 +1,11 @@
+
+@media screen  and (max-width:582px) and (min-width: 320px) {
+
+    .popup__close_type_card { 
+        width: 30px;
+        height: 30px;
+        right: -30px;
+        top: -30px;
+    }
+}
+
