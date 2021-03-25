@@ -8,3 +8,5 @@
 Домен, по которому можно обратиться к frontend: https://domainname.students.nomoredomains.icu/
 
 Домен, по которому можно обратиться к backend: https://api.domainname.students.nomoredomains.icu/
+
+**Ничего не меняла, просто перезагрузила виртуалку и сервер ожил. 
