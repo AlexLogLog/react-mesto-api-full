@@ -50,44 +50,44 @@ module.exports.newUser = async (req, res, next) => {
   };
 };
 
-  module.exports.patchUserInfo = (req, res, next) => {
-    const { name, about } = req.body;
-    UserSchema.findByIdAndUpdate(
-      req.user._id,
-      { name, about },
-      { new: true, runValidators: true },
-    )
-      .orFail(new NotFoundError())
-      .then((user) => {
-        res.status(200).send(user);
-      })
-      .catch(next);
-  };
+module.exports.patchUserInfo = (req, res, next) => {
+  const { name, about } = req.body;
+  UserSchema.findByIdAndUpdate(
+    req.user._id,
+    { name, about },
+    { new: true, runValidators: true },
+  )
+    .orFail(new NotFoundError())
+    .then((user) => {
+      res.status(200).send(user);
+    })
+    .catch(next);
+};
 
-  module.exports.patchUserAvatar = (req, res, next) => {
-    const { avatar } = req.body;
-    UserSchema.findByIdAndUpdate(
-      req.user._id,
-      { avatar },
-      { new: true, runValidators: true },
-    )
-      .orFail(new NotFoundError())
-      .then((user) => {
-        res.status(200).send(user);
-      })
-      .catch(next);
-  };
+module.exports.patchUserAvatar = (req, res, next) => {
+  const { avatar } = req.body;
+  UserSchema.findByIdAndUpdate(
+    req.user._id,
+    { avatar },
+    { new: true, runValidators: true },
+  )
+    .orFail(new NotFoundError())
+    .then((user) => {
+      res.status(200).send(user);
+    })
+    .catch(next);
+};
 
-  module.exports.login = (req, res, next) => {
-    const { email, password } = req.body;
-    UserSchema.findUserByCredentials(email, password)
-      .then((user) => {
-        const token = jwt.sign(
-          { _id: user._id },
-          JWT_SECRET,
-          { expiresIn: '7d' },
-        );
-        res.status(200).send({ token });
-      })
-      .catch(() => next(new UnauthorizedError('Неверный email или пароль')));
-  };
+module.exports.login = (req, res, next) => {
+  const { email, password } = req.body;
+  UserSchema.findUserByCredentials(email, password)
+    .then((user) => {
+      const token = jwt.sign(
+        { _id: user._id },
+        JWT_SECRET,
+        { expiresIn: '7d' },
+      );
+      res.status(200).send({ token });
+    })
+    .catch(() => next(new UnauthorizedError('Неверный email или пароль')));
+};
