@@ -39,15 +39,16 @@ module.exports.newUser = async (req, res, next) => {
       avatar,
       email,
       password: hash,
-    })
+    });
     return res.status(200).send({
       name: userNew.name, about: userNew.about, avatar: userNew.avatar, email: userNew.email,
-    })
+    });
   } catch (err) {
     if (err.name === 'MongoError' && err.code === 11000) {
       return next(new ConflictError('Пользователь с данным email уже есть'));
-    } else return next(err);
-  };
+    }
+    return next(err);
+  }
 };
 
 module.exports.patchUserInfo = (req, res, next) => {
